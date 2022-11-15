@@ -20,6 +20,7 @@ client.on(Events.MessageCreate, async message => {
 
     if (message.content == "!menu") {
         let dico = await menuJs.majMenu();
+        let messageText = '';
 
         // Vérification de si le menu est vide ou pas 
         if(Object.keys(dico).length === 0) {
@@ -38,6 +39,7 @@ client.on(Events.MessageCreate, async message => {
 
     if(message.content == "!menuAll") {
         let dico = await menuJs.majMenu();
+        let messageText = '';
 
         // Vérification de si le menu est vide ou pas 
         if(Object.keys(dico).length === 0) {
